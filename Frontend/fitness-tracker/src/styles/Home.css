@@ -1,0 +1,168 @@
+.home-container {
+  width: 100vw;
+  max-width: 1280px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  background: rgba(20, 20, 30, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 24px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.08);
+  margin-top: 2.5rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.home-welcome {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.home-welcome h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #00ffae;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #00ffae33, 0 4px 32px #000a;
+  margin-bottom: 0.7rem;
+}
+
+.home-welcome p {
+  color: #e0e0e0;
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.home-swiper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px #00ffae22;
+}
+
+.home-slide-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+  filter: brightness(0.92) contrast(1.08);
+  /* Remove left/right swipe effect: only allow fade, so no transform on hover */
+  transition: opacity 0.5s cubic-bezier(.23,1.02,.64,1.01);
+}
+
+.swiper-pagination-bullet {
+  background: #00ffae;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #00ffae;
+  opacity: 1;
+  box-shadow: 0 0 8px #00ffae99;
+}
+
+@media (max-width: 1300px) {
+  .home-container {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-container {
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    margin-top: 1.2rem;
+    max-width: 100vw;
+  }
+  .home-welcome h1 {
+    font-size: 2rem;
+  }
+  .home-slide-img {
+    height: 180px;
+  }
+  .home-swiper {
+    max-width: 98vw;
+  }
+}
+
+.login-container {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 20, 30, 0.85);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  margin-top: 2.5rem;
+}
+
+.login-card {
+  background: rgba(30, 30, 40, 0.98);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #00ffae22;
+  padding: 2.5rem 2.2rem 2rem 2.2rem;
+  min-width: 320px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-title {
+  color: #00ffae;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 12px #00ffae33;
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-input {
+  padding: 0.8rem 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid #00ffae44;
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.login-input:focus {
+  border: 1.5px solid #00ffae;
+  box-shadow: 0 2px 12px #00ffae44;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 1.15rem;
+  padding: 0.8rem 0;
+}
+
+@media (max-width: 600px) {
+  .login-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    min-width: 0;
+  }
+  .login-title {
+    font-size: 1.3rem;
+  }
+}
