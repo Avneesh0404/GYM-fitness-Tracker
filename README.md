@@ -9,5 +9,4 @@ A sleek and responsive fitness tracker web app to monitor your workouts, set goa
 - 📝 Set fitness goals and monitor achievement
 - 💪 Responsive design for mobile and desktop
 - 🔔 Reminders for workouts and hydration (optional)
-- 🌙 Dark mode support (if added)
 
