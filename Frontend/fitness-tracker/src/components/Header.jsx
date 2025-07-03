@@ -28,7 +28,7 @@ function Header() {
     <>
       <div className="header">
         <div className="logo">
-          <Link to="/" onClick={closeMenu}>🏋️‍♂️ Fitness with Avneesh</Link>
+          <Link to="/" onClick={closeMenu}>FitWithUs</Link>
         </div>
         <nav className="nav-links">
           <Link to="/home">Home</Link>
