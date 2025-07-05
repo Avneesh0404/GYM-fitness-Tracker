@@ -1,15 +1,39 @@
 import React, { useState } from 'react'
 import '../styles/Home.css'
+import { useNavigate } from 'react-router-dom'
 
 function Signup() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
+  const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle signup logic here
-    alert('Signup submitted!')
+    setError('')
+    setSuccess('')
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, password }),
+      })
+      const data = await response.json()
+      if (response.ok) {
+        setSuccess('Signup successful! Redirecting to login...')
+        setTimeout(() => {
+          navigate('/login')
+        }, 1500)
+      } else {
+        setError(data.msg || 'Signup failed')
+      }
+    } catch (err) {
+      setError('Error connecting to server')
+    }
   }
 
   return (
@@ -42,6 +66,8 @@ function Signup() {
             required
           />
           <button type="submit" className="get-started-btn login-btn">Sign Up</button>
+          {error && <div className="login-error">{error}</div>}
+          {success && <div className="login-success">{success}</div>}
         </form>
       </div>
     </div>

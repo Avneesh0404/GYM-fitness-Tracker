@@ -1,0 +1,291 @@
+body, .dashboard-container {
+  background: #101c2c;
+  color: #eaf0fa;
+}
+
+.dashboard-container {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #16213a;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(16,28,44,0.45), 0 2px 8px rgba(16,28,44,0.18);
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 28px;
+  color: #6ea8fe;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.dashboard-loading,
+.dashboard-error {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 18px 0;
+}
+
+.dashboard-error {
+  color: #ff6b6b;
+}
+
+.download-btn {
+  background: linear-gradient(90deg, #1e3a5c 0%, #274472 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  font-weight: 600;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(30,58,92,0.12);
+}
+
+.download-btn:hover {
+  background: linear-gradient(90deg, #274472 0%, #1e3a5c 100%);
+  box-shadow: 0 4px 16px rgba(30,58,92,0.18);
+}
+
+.progress-reports {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+.progress-card {
+  background: linear-gradient(135deg, #1e2746 60%, #23335c 100%);
+  border-radius: 14px;
+  padding: 22px 36px;
+  box-shadow: 0 2px 12px rgba(49,130,206,0.10);
+  text-align: center;
+  min-width: 140px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1.5px solid #23335c;
+}
+
+.progress-card:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(49,130,206,0.18);
+}
+
+.progress-card h4 {
+  margin: 0 0 8px 0;
+  color: #6ea8fe;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.progress-card p {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #eaf0fa;
+  font-weight: bold;
+}
+
+.progress-label {
+  font-size: 0.95rem;
+  color: #a3b8d8;
+  font-weight: 400;
+}
+
+.workout-graphs {
+  margin: 32px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.workout-graph-card {
+  background: #192642;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(49,130,206,0.08);
+  padding: 24px 18px;
+  border: 1.5px solid #23335c;
+}
+
+.workout-graph-card h3 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #6ea8fe;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.workout-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.workout-input {
+  padding: 10px 8px;
+  border: 1.5px solid #23335c;
+  border-radius: 7px;
+  font-size: 1rem;
+  min-width: 120px;
+  background: #101c2c;
+  color: #eaf0fa;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(30,58,92,0.08);
+}
+
+.workout-input:focus {
+  border: 1.5px solid #6ea8fe;
+  outline: none;
+  background: #16213a;
+}
+
+.workout-btn {
+  background: linear-gradient(90deg, #274472 0%, #1e3a5c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(30,58,92,0.10);
+}
+
+.workout-btn:hover {
+  background: linear-gradient(90deg, #1e3a5c 0%, #274472 100%);
+  box-shadow: 0 4px 16px rgba(30,58,92,0.18);
+}
+
+.cancel-btn {
+  background: #ff6b6b;
+  margin-left: 6px;
+}
+
+.cancel-btn:hover {
+  background: #b91c1c;
+}
+
+.workouts-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #16213a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(30,58,92,0.10);
+  margin-top: 18px;
+}
+
+.workouts-table th, .workouts-table td {
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.workouts-table th {
+  background: #23335c;
+  color: #6ea8fe;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #274472;
+}
+
+.workouts-table tr:nth-child(even) {
+  background: #192642;
+}
+
+.workouts-table tr:nth-child(odd) {
+  background: #16213a;
+}
+
+.workouts-table td {
+  color: #eaf0fa;
+  font-size: 1rem;
+}
+
+.action-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 7px 14px;
+  margin: 0 2px;
+  font-size: 0.97rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 500;
+}
+
+.edit-btn {
+  background: #6ea8fe;
+  color: #16213a;
+}
+
+.edit-btn:hover {
+  background: #4a90e2;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.suggestion-card {
+  background: linear-gradient(90deg, #1e2746 60%, #23335c 100%);
+  border-radius: 12px;
+  padding: 18px 28px;
+  margin-bottom: 28px;
+  color: #ffe082;
+  box-shadow: 0 2px 12px rgba(49,130,206,0.10);
+  border: 1.5px solid #23335c;
+}
+
+.suggestion-card h4 {
+  margin: 0 0 8px 0;
+  color: #ffe082;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.suggestion-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.suggestion-card li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: #ffe082;
+}
+
+@media (max-width: 700px) {
+  .dashboard-container {
+    padding: 12px 2px;
+  }
+  .workout-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .workouts-table th, .workouts-table td {
+    padding: 8px 2px;
+    font-size: 0.95rem;
+  }
+  .progress-reports {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .workout-graphs {
+    gap: 18px;
+  }
+}
