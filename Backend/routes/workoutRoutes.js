@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Workout = require('../models/workout');
-const auth = require('../middleware/authMiddleware');
+const Workout = require('../model/workout');
+const auth = require('../middleware/auth.js');
 
 // @route   GET /api/workouts
 router.get('/', auth, async (req, res) => {
