@@ -1,3 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .home-container {
   width: 100vw;
   max-width: 1280px;
@@ -21,6 +37,18 @@
 .home-welcome {
   text-align: center;
   margin-bottom: 2.2rem;
+  animation: fadeInUp 1.1s cubic-bezier(.23,1.01,.32,1) both;
+  background: rgba(22,33,58,0.92);
+  border-radius: 18px;
+  padding: 36px 24px 24px 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 24px rgba(16,28,44,0.18);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.home-welcome:hover {
+  box-shadow: 0 8px 32px rgba(0,255,174,0.12);
+  transform: translateY(-4px) scale(1.01);
 }
 
 .home-welcome h1 {
@@ -46,7 +74,9 @@
   margin: 0 auto;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 4px 32px #00ffae22;
+  box-shadow: 0 2px 16px rgba(0,255,174,0.08);
+  margin-bottom: 24px;
+  background: #101c2c;
 }
 
 .home-slide-img {
@@ -54,9 +84,8 @@
   height: 340px;
   object-fit: cover;
   border-radius: 18px;
-  filter: brightness(0.92) contrast(1.08);
-  /* Remove left/right swipe effect: only allow fade, so no transform on hover */
-  transition: opacity 0.5s cubic-bezier(.23,1.02,.64,1.01);
+  transition: transform 0.7s cubic-bezier(.23,1.01,.32,1);
+  opacity: 0.97;
 }
 
 .swiper-pagination-bullet {
@@ -69,6 +98,66 @@
   background: #00ffae;
   opacity: 1;
   box-shadow: 0 0 8px #00ffae99;
+}
+
+.scroll-down-indicator {
+  text-align: center;
+  margin-top: 18px;
+  color: #00ffae;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  animation: fadeInUp 1.2s 1.2s both;
+}
+
+.highlighted {
+  color: #00ffae;
+  background: linear-gradient(90deg, #00ffae 0%, #6ea8fe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  margin: 36px 0 18px 0;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #1e2746 60%, #23335c 100%);
+  border-radius: 16px;
+  padding: 26px 22px 18px 22px;
+  min-width: 220px;
+  max-width: 270px;
+  box-shadow: 0 2px 12px rgba(49,130,206,0.10);
+  color: #eaf0fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #23335c;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.1s cubic-bezier(.23,1.01,.32,1) forwards;
+}
+
+.feature-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  animation: popIn 0.7s cubic-bezier(.23,1.01,.32,1);
+}
+
+@keyframes popIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.fade-in-feature {
+  animation-name: fadeInUp;
 }
 
 @media (max-width: 1300px) {
@@ -91,6 +180,25 @@
   }
   .home-swiper {
     max-width: 98vw;
+  }
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .feature-card {
+    min-width: 90vw;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-welcome {
+    padding: 18px 6px 12px 6px;
+    font-size: 1rem;
+  }
+  .home-slide-img {
+    height: 180px;
   }
 }
 

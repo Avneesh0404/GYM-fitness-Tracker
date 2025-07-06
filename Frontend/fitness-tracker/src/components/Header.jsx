@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import '../styles/Header.css'
 import { gsap } from 'gsap'
 
@@ -11,6 +11,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   const imgRef = useRef(null)
+  const navigate = useNavigate()
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -58,7 +59,12 @@ function Header() {
         <div className="left-section">
           <h1>Fitness Tracker</h1>
           <p>Fitness Tracker is a platform that helps you track your fitness goals and progress.</p>
-          <button className="get-started-btn">Get Started</button>
+          <button
+            className="get-started-btn"
+            onClick={() => navigate('/signup')}
+          >
+            Get Started
+          </button>
         </div>
         <div className="right-section">
           <img

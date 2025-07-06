@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom' // <-- Add this import
 import '../styles/Dashboard.css'
 import { Line } from 'react-chartjs-2'
 import {
@@ -18,6 +19,16 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 const normalize = str => str.trim().toLowerCase()
 
 function Dashboard() {
+  const navigate = useNavigate() // <-- Add this line
+
+  // Protect route: redirect if not logged in
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (!token) {
+      navigate('/login')
+    }
+  }, [navigate])
+
   const [workouts, setWorkouts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
