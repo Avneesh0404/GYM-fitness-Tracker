@@ -5,4 +5,4 @@ const userSchema = new mongo.Schema({
     password:{type:String,require:true,unique:true}
 })
  
-module.exports = mongo.model("User", userSchema)
+module.exports = mongo.model("gymUser", userSchema)

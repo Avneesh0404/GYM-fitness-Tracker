@@ -46,7 +46,7 @@ function Dashboard() {
     setError('')
     try {
       const token = localStorage.getItem('token')
-      const response = await fetch('http://localhost:5000/api/workouts', {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_URL}/workouts`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -159,7 +159,7 @@ function Dashboard() {
       let response
       const token = localStorage.getItem('token')
       if (editId) {
-        response = await fetch(`http://localhost:5000/api/workouts/${editId}`, {
+        response = await fetch(`${import.meta.env.VITE_REACT_APP_URL}/workouts/${editId}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ function Dashboard() {
           body: JSON.stringify(form),
         })
       } else {
-        response = await fetch('http://localhost:5000/api/workouts', {
+        response = await fetch(`${import.meta.env.VITE_REACT_APP_URL}/workouts`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -191,7 +191,7 @@ function Dashboard() {
     setError('')
     try {
       const token = localStorage.getItem('token')
-      const response = await fetch(`http://localhost:5000/api/workouts/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_URL}/workouts/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
