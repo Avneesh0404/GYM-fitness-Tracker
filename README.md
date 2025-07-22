@@ -28,6 +28,7 @@ A full-stack fitness tracking web application that allows users to register, log
 - Axios
 - Tailwind CSS
 - Vercel for deployment
+- chart.js
 
 ### 🔧 Backend (Node.js + Express)
 - Express.js
