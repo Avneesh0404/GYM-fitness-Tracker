@@ -4,8 +4,8 @@ A full-stack fitness tracking web application that allows users to register, log
 
 ## 🚀 Live Demo
 
-🔗 **Frontend** (Vercel): [[https://gym-fitness-tracker-avneesh0404.vercel.app](https://gym-fitness-tracker-5djd.vercel.app/)](https://gym-fitness-tracker-avneesh0404.vercel.app)  
-🔗 **Backend API** (Render): [https://gymfitnessapi.onrender.com](https://gymfitnessapi.onrender.com)
+🔗 **Frontend** (Vercel): [(https://gym-fitness-tracker-5djd.vercel.app/)](https://gym-fitness-tracker-5djd.vercel.app/) 
+🔗 **Backend API** (Render): ([https://gymfitnessapi.onrender.com](https://gym-fitness-tracker.onrender.com/api))
 
 ---
 
@@ -51,9 +51,9 @@ npm install
 ```
 ## Backend Setup
 Create a .env file in /Backend
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5000
+-MONGO_URI=your_mongodb_connection_string
+-JWT_SECRET=your_jwt_secret
+-PORT=5000
 ```bash
 npm start
 ```
