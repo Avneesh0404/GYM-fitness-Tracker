@@ -4,7 +4,7 @@ A full-stack fitness tracking web application that allows users to register, log
 
 ## 🚀 Live Demo
 
-🔗 **Frontend** (Vercel): [https://gym-fitness-tracker-avneesh0404.vercel.app](https://gym-fitness-tracker-avneesh0404.vercel.app)  
+🔗 **Frontend** (Vercel): [[https://gym-fitness-tracker-avneesh0404.vercel.app](https://gym-fitness-tracker-5djd.vercel.app/)](https://gym-fitness-tracker-avneesh0404.vercel.app)  
 🔗 **Backend API** (Render): [https://gymfitnessapi.onrender.com](https://gymfitnessapi.onrender.com)
 
 ---
