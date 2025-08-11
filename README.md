@@ -15,7 +15,7 @@ A full-stack fitness tracking web application that allows users to register, log
 - 📝 Workout logging with date, exercise, and time
 - ✏️ Update or delete workouts
 - 📅 View daily and historical workout logs
-- 💬 Clean and responsive UI with Tailwind CSS
+- 💬 Clean and responsive UI 
 - 🌍 RESTful API integration with frontend
 
 ---
@@ -26,7 +26,6 @@ A full-stack fitness tracking web application that allows users to register, log
 - React.js
 - React Router DOM
 - Axios
-- Tailwind CSS
 - Vercel for deployment
 - chart.js
 
