@@ -25,7 +25,6 @@ A full-stack fitness tracking web application that allows users to register, log
 ### 🔧 Frontend (React + Vite)
 - React.js
 - React Router DOM
-- Axios
 - Vercel for deployment
 - chart.js
 
