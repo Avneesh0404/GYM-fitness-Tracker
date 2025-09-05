@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 
 //
 // You can replace this with your own image path or import
-const fitnessImage = "https://imgs.search.brave.com/dGHG7WelJa5VN_HsaRDUSjTrOjSiZD0WE52Jki6fFdI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDYv/Njk0LzA1NS9zbWFs/bC9hc2lhbi1zcG9y/dC13b21hbi1ydW5u/aW5nLW9uLXRyZWFk/bWlsbC1pbi1maXRu/ZXNzLWNsdWItY2Fy/ZGlvLXdvcmtvdXQt/aGVhbHRoeS1saWZl/c3R5bGUtZ3V5LXRy/YWluaW5nLWluLWd5/bS1zcG9ydC1ydW5u/aW5nLWNvbmNlcHQt/cGhvdG8uanBn"
+const fitnessImage = "https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
